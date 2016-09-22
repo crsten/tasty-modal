@@ -1,6 +1,5 @@
 {
   "name": "tasty-modal",
-  "version": "0.0.1",
   "description": "The most delicious modal dialog in the universe",
   "main": "src/js/tasty-modal.js",
   "scripts": {
@@ -16,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crsten/tasty-modal.git"
+    "url": "https://github.com/crsten/tasty-modal.git"
   },
   "keywords": [
     "modal",
