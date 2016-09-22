@@ -1,0 +1,56 @@
+{
+  "name": "tasty-modal",
+  "version": "0.0.1",
+  "description": "The most delicious modal dialog in the universe",
+  "main": "src/js/tasty-modal.js",
+  "scripts": {
+    "test": "echo",
+    "compile": "npm run compile-js & npm run compile-sass",
+    "dev": "concurrently \"npm run compile-sass-watch\" \"npm run compile-js-watch\"",
+    "compile-sass": "sass src/styles/tasty-modal.scss dist/tasty-modal.css",
+    "compile-sass-watch": "sass --watch src/styles/tasty-modal.scss:dist/tasty-modal.css",
+    "compile-js": "babel --presets es2015 --minified --source-maps -d dist/ src/js/",
+    "compile-js-watch": "babel --presets es2015 --watch --minified --source-maps -d dist/ src/js/",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crsten/tasty-modal.git"
+  },
+  "keywords": [
+    "modal",
+    "tasty"
+  ],
+  "contributors": [
+    {
+      "name": "Carsten Jacobsen",
+      "email": "car.jacobsen@gmail.com",
+      "url": "https://github.com/crsten"
+    },
+    {
+      "name": "Sigve Hansen",
+      "email": "sighan12@gmail.com",
+      "url": "https://github.com/sifferhans"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crsten/tasty-modal/issues"
+  },
+  "homepage": "https://github.com/crsten/tasty-modal#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "commitizen": "^2.8.6",
+    "concurrently": "^2.2.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "sass": "^0.5.0",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
